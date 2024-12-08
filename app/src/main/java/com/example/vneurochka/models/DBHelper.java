@@ -19,7 +19,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion,  int newVersion) { }
 
     static final String DATABASE_NAME = "vneurochka.db";
-    static String DATABASE_PATH;
+    static String DATABASE_PATH = "C:\\Users\\Admin\\AndroidStudioProjects\\vneurochka\\" + DATABASE_NAME;
     static final String USERS_TABLE_NAME = "users";
     static final String GROUP_TYPE_TABLE_NAME = "group_type";
     static final String GROUPS_TABLE_NAME = "groups";
@@ -30,13 +30,12 @@ public class DBHelper extends SQLiteOpenHelper {
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
         this.context = context;
-        DATABASE_PATH = context.getFilesDir().getPath() + DATABASE_NAME;
     }
 
-     void create_db(){
+     public void create_db(){
          File file = new File(DATABASE_PATH);
          if (!file.exists()) {
-             try(InputStream myInput = context.getAssets().open(DATABASE_NAME);
+             try(InputStream myInput = context.getAssets().open(DATABASE_PATH);
                  OutputStream myOutput = new FileOutputStream(DATABASE_PATH)) {
                  byte[] buffer = new byte[1024];
                  int length;
@@ -51,7 +50,7 @@ public class DBHelper extends SQLiteOpenHelper {
          }
      }
      public SQLiteDatabase open()throws SQLException {
-
-         return SQLiteDatabase.openDatabase(DATABASE_PATH, null, SQLiteDatabase.OPEN_READWRITE);
+         SQLiteDatabase db = SQLiteDatabase.openDatabase(DATABASE_PATH, null, SQLiteDatabase.OPEN_READWRITE);
+         return db;
      }
 }
