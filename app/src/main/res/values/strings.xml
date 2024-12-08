@@ -1,6 +1,24 @@
 <resources>
-    <string name="app_name">vneurochka</string>
+    <string name="app_name">Внеурочка</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="registration">Регистрация</string>
+    <string name="login">Введите логин</string>
+    <string name="password">Придумайте пароль</string>
+    <string name="rpt_password">Повторите пароль</string>
+    <string name="e_mail">Введите вашу почту</string>
+    <string name="btn">ЗАРЕГИСТРИРОВАТЬСЯ</string>
+    <string name="error_password_title">ОШИБКА В ПАРОЛЕ</string>
+    <string name="error_password_text">Простите, измените пожалуйста пароль</string>
+    <string name="error_password_pb">Исправлю</string>
+    <string name="error_login_title">ОШИБКА В ЛОГИНЕ</string>
+    <string name="error_login_text">Простите, измените пожалуйста логин</string>
+    <string name="error_login_pb">Исправлю</string>
+    <string name="error_rpt_title">ОШИБКА В ПАРОЛЯХ</string>
+    <string name="error_rpt_text">Простите, пароли не совпадают</string>
+    <string name="error_rpt_pb">Исправлю</string>
+    <string name="error_reg_title">ОШИБКЕ В ЛОГИНЕ ИЛИ ПАРОЛЕ</string>
+    <string name="error_reg_text">Простите, проверьте логин и пароль, если вы не зарегестрированы, сделайте это!</string>
+    <string name="error_reg_pb">Исправлюсь</string>
 </resources>
